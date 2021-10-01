@@ -32,6 +32,7 @@ class weekViewController: UIViewController {
         super.viewDidLoad()
         setUpTableView()
         setUpLayout()
+        weekTableView.reloadData()
     }
     // MARK: - Helper
     private func setUpTableView() {
@@ -60,6 +61,7 @@ extension weekViewController: UITableViewDelegate, UITableViewDataSource {
         cell.reminderCalorie?.text = "잔여 칼로리 - \(cellData.Remainder)Kcal"
         cell.reminderCalorie?.sizeToFit()
         total = Calorie.food - Calorie.exercise
+        
         reminder.title = "오늘의 잔여 칼로리는 \(total)Kcal입니다!"
         return cell
     }

@@ -10,4 +10,5 @@ import Foundation
 struct Calorie {
     static var food = 0
     static var exercise = 0
+    
 }

@@ -57,7 +57,7 @@ class exerciseViewController: UIViewController {
                if editingStyle == .delete {
                    var cellData1 = Exercise(exerciseImage: "걷기", exercisename: "걷기", exerciseHour: "02시간 05분", exercisecalorie: "619")
                    cellData1 = exerciseList.itemAt(index: indexPath.row)
-                   Total -= Int(cellData.exercisecalorie) ?? 0
+                   Total -= Int(cellData1.exercisecalorie) ?? 0
                    exerciseList.delete(indexRow: indexPath.row)
                    exerciseTableView.deleteRows(at: [indexPath], with: .fade)
                    minusCalorieTotal.title = "총 소모 칼로리는 \(Total)Kcal입니다!"

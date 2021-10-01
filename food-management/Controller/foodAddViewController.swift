@@ -26,7 +26,7 @@ class foodAddViewController: UIViewController{
    
     @IBAction func tappedBtn(_ sender: UIButton) {
         foodList.add(foodImage: data[selectRow], foodname: foodName.text!, foodweight: foodAmount.text!, foodcalorie: foodCalorie.text!)
-        
+       
     }
 }
 extension foodAddViewController: UIPickerViewDataSource {

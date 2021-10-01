@@ -25,7 +25,6 @@ class foodViewController: UIViewController {
         super.viewDidLoad()
         setUpTableView()
         setUpLayout()
-        
         foodTableView.reloadData()
         
     }
@@ -33,6 +32,7 @@ class foodViewController: UIViewController {
     {
         foodTableView.reloadData()
     }
+    
 
     
     // MARK: -  Helper
@@ -81,9 +81,12 @@ class foodViewController: UIViewController {
             cell.detailLabel?.sizeToFit()
             cell.calorieLabel?.text = "+\(cellData.foodcalorie)Kcal"
             cell.calorieLabel?.sizeToFit()
+            
+            
             Total += Int(cellData.foodcalorie) ?? 0
             Calorie.food = Total
             calorieTotal.title = "총 섭취 칼로리는 \(Total)Kcal입니다!"
+        
             //테이블 뷰를 리로드하면 칼로리가 추가되는 문제가 있음.
             return cell
         }
