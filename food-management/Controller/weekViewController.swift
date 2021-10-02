@@ -14,14 +14,14 @@ class weekViewController: UIViewController {
     
     
     // MARK: - 프로퍼티
-    var weekTableViewDataModel = [Week.init(day: "9/26", Remainder: "293"),
-                                  Week.init(day: "9/27", Remainder: "0"),
-                                  Week.init(day: "9/28", Remainder: "123"),
-                                  Week.init(day: "9/29", Remainder: "343"),
-                                  Week.init(day: "9/30", Remainder: "111"),
-                                  Week.init(day: "10/1", Remainder: "972"),
-                                  Week.init(day: "10/2", Remainder: "0")]
-    var total = 111
+    var weekTableViewDataModel = [Week.init(day: "10/2", Remainder: "잔여 칼로리 살펴보기!"),
+                                  Week.init(day: "10/3", Remainder: "잔여 칼로리 살펴보기!"),
+                                  Week.init(day: "10/4", Remainder: "잔여 칼로리 살펴보기!"),
+                                  Week.init(day: "10/5", Remainder: "잔여 칼로리 살펴보기!"),
+                                  Week.init(day: "10/6", Remainder: "잔여 칼로리 살펴보기!"),
+                                  Week.init(day: "10/7", Remainder: "잔여 칼로리 살펴보기!"),
+                                  Week.init(day: "10/8", Remainder: "잔여 칼로리 살펴보기!")]
+    
     // MARK: - UI 객체
     
     @IBOutlet weak var weekTableView: UITableView!
@@ -33,6 +33,10 @@ class weekViewController: UIViewController {
         setUpTableView()
         setUpLayout()
         weekTableView.reloadData()
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        weekTableView.reloadData()
     }
     // MARK: - Helper
     private func setUpTableView() {
@@ -42,10 +46,6 @@ class weekViewController: UIViewController {
     }
     private func setUpLayout() {
     }
-    // MARK: - Delete(CRUD)
-    
-    
-    
 }
     // MARK: - UITableViewDataSource, UITableViewDelegate
 extension weekViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,13 +56,13 @@ extension weekViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellData = weekTableViewDataModel[indexPath.row]
         let cell = weekTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! weekTableViewCell
+//        cell.selectionStyle = .none //셀 자체
         cell.dayTitle?.text = cellData.day
         cell.dayTitle?.sizeToFit()
-        cell.reminderCalorie?.text = "잔여 칼로리 - \(cellData.Remainder)Kcal"
+        cell.reminderCalorie?.text = cellData.Remainder
         cell.reminderCalorie?.sizeToFit()
-        total = Calorie.food - Calorie.exercise
-        
-        reminder.title = "오늘의 잔여 칼로리는 \(total)Kcal입니다!"
+        Calorie.totalCalorie = Calorie.food - Calorie.exercise
+        reminder.title = "오늘의 잔여 칼로리는 \(Calorie.totalCalorie)Kcal입니다!!!"
         return cell
     }
     
@@ -71,7 +71,9 @@ extension weekViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! weekPlusViewController
         vc.data = cellData
         present(vc, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: false) //선택이 되지만 x
     }
     
     
 }
+ 

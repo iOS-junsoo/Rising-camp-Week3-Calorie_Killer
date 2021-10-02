@@ -9,5 +9,5 @@ import Foundation
 
 struct Week {
     var day: String //날짜
-    var Remainder: String //잔여 칼로리
+    var Remainder: String //잔여 칼로리 상태
 }

@@ -23,7 +23,7 @@ class weekPlusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calorie = ["섭취 칼로리", "소모 칼로리", "잔여 칼로리"]
-        unit = [2530.0, 1830.0, 700.0]
+        unit = [Double(Calorie.food), Double(Calorie.exercise), Double(Calorie.totalCalorie)]
         
         BarChartView.noDataText = "데이터가 없습니다."
         BarChartView.noDataFont = .systemFont(ofSize: 20)
@@ -77,7 +77,7 @@ class weekPlusViewController: UIViewController {
 
 
         // 맥시멈
-        BarChartView.leftAxis.axisMaximum = 5000
+        BarChartView.leftAxis.axisMaximum = 3000
         // 미니멈
         BarChartView.leftAxis.axisMinimum = 0
 
@@ -89,7 +89,7 @@ class weekPlusViewController: UIViewController {
 extension weekPlusViewController {
     func setUpLayout() {
         self.day.text = data?.day
-        self.label.text = "총 잔여 칼로리는 \(reminder)Kcal 입니다."
+        self.label.text = "총 잔여 칼로리는 \(Calorie.totalCalorie)Kcal 입니다."
         self.label.sizeToFit()
     }
 }

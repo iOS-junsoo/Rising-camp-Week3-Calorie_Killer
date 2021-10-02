@@ -8,8 +8,11 @@
 import Foundation
 import UIKit
 
+//FoodList.shared.itemAt(index: <#T##Int#>)
+
 class FoodList {
-    var storage: [Food]
+    private var storage: [Food] //외부 x
+    static let shared = FoodList()
     init() {
         self.storage = [Food]()
     }
@@ -30,3 +33,5 @@ class FoodList {
       return storage[index]
     }
 }
+
+//View model -

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rnc-bo-PFU">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -79,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="882" y="992"/>
         </scene>
-        <!--총 섭취 칼로리는 ~입니다.-->
+        <!--총 섭취 칼로리는 0Kcal입니다.-->
         <scene sceneID="PQz-dh-Epi">
             <objects>
                 <viewController id="aDQ-I0-0eB" customClass="foodViewController" customModule="food_management" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +102,7 @@
                             <constraint firstItem="dcd-G5-XdZ" firstAttribute="trailing" secondItem="urB-Ip-09Z" secondAttribute="trailing" id="c3i-z2-htK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="총 섭취 칼로리는 ~입니다." id="yd7-M8-a0d">
+                    <navigationItem key="navigationItem" title="총 섭취 칼로리는 0Kcal입니다." id="yd7-M8-a0d">
                         <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" id="kEz-5P-5mW">
                             <color key="tintColor" red="0.2038958371" green="0.2823693156" blue="0.34113025670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -133,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12C-um-RhN">
-                                <rect key="frame" x="35" y="145" width="320" height="216"/>
+                                <rect key="frame" x="35" y="145.33333333333334" width="320" height="216.00000000000003"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BW-AD-Nut">
                                 <rect key="frame" x="16.666666666666671" y="386" width="123.00000000000001" height="30"/>
@@ -164,7 +165,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E96-ky-Fab">
-                                <rect key="frame" x="171" y="702" width="48.333333333333343" height="31"/>
+                                <rect key="frame" x="168.33333333333334" y="700.33333333333337" width="53.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="추가"/>
                                 <connections>
@@ -247,7 +248,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRB-29-0k8">
-                                <rect key="frame" x="35" y="145" width="320" height="216"/>
+                                <rect key="frame" x="35" y="145.33333333333334" width="320" height="216.00000000000003"/>
                             </pickerView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a0-Dz-Sku">
                                 <rect key="frame" x="35" y="356.33333333333331" width="320" height="215.99999999999994"/>
@@ -257,7 +258,7 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW4-tT-dgL">
-                                <rect key="frame" x="171" y="702" width="48.333333333333343" height="31"/>
+                                <rect key="frame" x="168.33333333333334" y="700.33333333333337" width="53.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="추가"/>
                                 <connections>
@@ -308,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="-132.30769230769229" y="2466.824644549763"/>
         </scene>
-        <!--오늘의 잔여 칼로리는 ~입니다.-->
+        <!--오늘의 잔여 칼로리는 0Kcal입니다.-->
         <scene sceneID="Lde-AN-YDx">
             <objects>
                 <viewController id="ZEk-aQ-ooP" customClass="weekViewController" customModule="food_management" customModuleProvider="target" sceneMemberID="viewController">
@@ -330,7 +331,7 @@
                             <constraint firstItem="j1T-2A-EF4" firstAttribute="leading" secondItem="fb1-d4-IhM" secondAttribute="leading" id="rV9-Zu-zN6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="오늘의 잔여 칼로리는 ~입니다." id="PPP-oW-7vt"/>
+                    <navigationItem key="navigationItem" title="오늘의 잔여 칼로리는 0Kcal입니다." id="PPP-oW-7vt"/>
                     <connections>
                         <outlet property="reminder" destination="PPP-oW-7vt" id="jov-aR-jIL"/>
                         <outlet property="weekTableView" destination="j1T-2A-EF4" id="P8N-XG-xh7"/>
@@ -340,7 +341,7 @@
             </objects>
             <point key="canvasLocation" x="882" y="1702"/>
         </scene>
-        <!--총 소모 칼로리는  ~입니다.-->
+        <!--총 소모 칼로리는 0Kcal입니다.-->
         <scene sceneID="FWF-lC-IbS">
             <objects>
                 <viewController id="j33-05-rj4" customClass="exerciseViewController" customModule="food_management" customModuleProvider="target" sceneMemberID="viewController">
@@ -362,7 +363,7 @@
                             <constraint firstItem="Mg5-gH-cLD" firstAttribute="leading" secondItem="DqM-bL-mqE" secondAttribute="leading" id="xDf-Ih-pmQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="총 소모 칼로리는  ~입니다." id="Mtg-Hq-6HN">
+                    <navigationItem key="navigationItem" title="총 소모 칼로리는 0Kcal입니다." id="Mtg-Hq-6HN">
                         <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" id="iyu-Cy-rwf">
                             <color key="tintColor" red="0.2038958371" green="0.2823693156" blue="0.34113025670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>

@@ -16,6 +16,7 @@ class foodViewController: UIViewController {
     
     // MARK: - 프로퍼티
     var Total = 0
+    
     // MARK: - UI 객체
     @IBOutlet weak var foodTableView: UITableView!
     @IBOutlet weak var calorieTotal: UINavigationItem!
@@ -26,7 +27,6 @@ class foodViewController: UIViewController {
         setUpTableView()
         setUpLayout()
         foodTableView.reloadData()
-        
     }
     override func viewWillAppear(_ animated: Bool)
     {
@@ -56,9 +56,7 @@ class foodViewController: UIViewController {
                foodTableView.deleteRows(at: [indexPath], with: .fade)
                calorieTotal.title = "총 섭취 칼로리는 \(Total)Kcal입니다!"
                
-           } else if editingStyle == .insert {
-               
-           }
+           } 
        }
 }
     
@@ -81,15 +79,15 @@ class foodViewController: UIViewController {
             cell.detailLabel?.sizeToFit()
             cell.calorieLabel?.text = "+\(cellData.foodcalorie)Kcal"
             cell.calorieLabel?.sizeToFit()
-            
-            
             Total += Int(cellData.foodcalorie) ?? 0
+            print(Total)
             Calorie.food = Total
             calorieTotal.title = "총 섭취 칼로리는 \(Total)Kcal입니다!"
-        
+            
             //테이블 뷰를 리로드하면 칼로리가 추가되는 문제가 있음.
             return cell
         }
     }
     
 
+// 리로드 오류 수정 + 데이터 저장 어떻게 하는지 파악
